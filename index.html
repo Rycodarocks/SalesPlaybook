@@ -20,7 +20,7 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #0f172a; border-radius: 4px; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #f43f5e; } /* Neon Red hover */
+        ::-webkit-scrollbar-thumb:hover { background: #f43f5e; }
 
         /* Modal Styles */
         .modal-overlay {
@@ -69,6 +69,12 @@
         .neon-green-glow {
             text-shadow: 0 0 10px rgba(74, 222, 128, 0.6);
         }
+
+        /* Custom Scrollbar for Modals */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #22d3ee; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-200">
@@ -90,17 +96,24 @@
                 </ul>
             </div>
             <div>
-                <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-3 font-bold">The Site Walk</p>
+                <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-3 font-bold">Pain & Discovery</p>
                 <ul class="space-y-2 text-sm font-medium">
+                    <li><a href="#pain-audit" class="nav-link block py-1 hover:text-white transition">2-Minute Pain Audit</a></li>
                     <li><a href="#walkthrough" class="nav-link block py-1 hover:text-white transition">Walkthrough Script</a></li>
                     <li><a href="#photo-audit" class="nav-link block py-1 hover:text-white transition">Photo Audit</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-3 font-bold">Revenue Strategy</p>
+                <ul class="space-y-2 text-sm font-medium">
+                    <li><a href="#service-account" class="nav-link block py-1 hover:text-white transition">Service Account Fallback</a></li>
+                    <li><a href="#tiers" class="nav-link block py-1 hover:text-white transition">Three-Tier Close</a></li>
                 </ul>
             </div>
             <div>
                 <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-3 font-bold">Advanced Strategy</p>
                 <ul class="space-y-2 text-sm font-medium">
                     <li><a href="#psychology" class="nav-link block py-1 hover:text-white transition">Module 3: Psychology</a></li>
-                    <li><a href="#tiers" class="nav-link block py-1 hover:text-white transition">Module 4: Revenue</a></li>
                     <li><a href="#negotiation" class="nav-link block py-1 hover:text-white transition">Module 5: Negotiation</a></li>
                 </ul>
             </div>
@@ -167,7 +180,6 @@
                                 <span><strong>PSPS Events:</strong> Fresh pain point (Public Safety Power Shutoffs).</span>
                             </div>
                         </div>
-                        <!-- Neon Red Hint -->
                         <div class="bg-rose-500/10 border-l-2 border-rose-500 p-3 text-sm text-slate-300 rounded-r-lg">
                             <span class="text-rose-500 font-bold uppercase text-[10px] tracking-widest block mb-1">Red Flag</span>
                             Never ask "Are you the decision maker?" It immediately puts up their guard and forces them to say no.
@@ -196,7 +208,6 @@
                         </h4>
                         <p class="text-slate-300 mb-4 text-sm">Use this script to elegantly leave marketing materials while maintaining your high-value positioning.</p>
                         
-                        <!-- MATCHED TO THE UPDATED MODAL SCRIPT -->
                         <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-slate-300 text-sm italic group-hover:border-cyan-500/30 transition">
                             "No worries at all. 
                             <span class="text-cyan-400 font-bold not-italic block my-2 border-l-2 border-cyan-400 pl-3">&rarr; [Physical Interrupt: Hand them brochure] "I'll just leave this risk-assessment checklist for your operations team."</span> 
@@ -207,37 +218,214 @@
             </div>
         </section>
 
-        <!-- MODULE 2: THE SITE WALK -->
-        <section id="walkthrough" class="py-24 px-6 lg:px-12 bg-slate-900 border-t border-slate-800 max-w-6xl mx-auto w-full">
+        <!-- MODULE 2: THE 2-MINUTE PAIN AUDIT -->
+        <section id="pain-audit" class="py-24 px-6 lg:px-12 bg-slate-950 border-t border-slate-800 max-w-6xl mx-auto">
             <div class="mb-16">
-                <span class="text-cyan-500 font-bold tracking-widest text-xs uppercase">Module 02</span>
-                <h2 class="text-4xl font-bold text-white mt-2">The Site Walk: Gathering Data</h2>
+                <span class="text-rose-500 font-bold tracking-widest text-xs uppercase">Module 02</span>
+                <h2 class="text-4xl font-bold text-white mt-2">The 2-Minute Pain Audit</h2>
+                <p class="text-slate-400 mt-4 max-w-3xl">Build the pain <strong class="text-rose-400">before</strong> you sell the solution. This audit uncovers their true cost of downtime and justifies the site walk.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
                 
+                <!-- Left: The Psychology -->
                 <div class="space-y-8">
-                    <div onclick="openModal('modal-walkthrough')" class="glass-card p-8 rounded-2xl relative overflow-hidden interactive-card group border-green-500/30 hover:border-green-400/60 shadow-[0_0_15px_rgba(74,222,128,0.05)]">
+                    <div class="glass-card p-8 rounded-2xl border-rose-500/30">
+                        <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            <i class="fas fa-clipboard-list text-rose-500"></i>
+                            Two Paths to the Site Walk
+                        </h3>
+                        <ul class="space-y-4 text-slate-300 text-sm">
+                            <li class="flex items-start gap-3">
+                                <div class="text-green-400 font-bold shrink-0 text-lg">A</div>
+                                <div>
+                                    <strong class="text-green-400 block mb-1">Direct Approach (Confident Decision Makers)</strong>
+                                    <span class="text-slate-400">When the decision maker is confident and engaged, skip the audit and go straight for the site walk: "We're doing backup power nearby. Mind if I grab some photos of your panel?"</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="text-rose-400 font-bold shrink-0 text-lg">B</div>
+                                <div>
+                                    <strong class="text-rose-400 block mb-1">Pain Audit First (Hesitant or Skeptical)</strong>
+                                    <span class="text-slate-400">When they're hesitant, busy, or skeptical, run the 2-Minute Pain Audit first. Once they quantify the problem ($50K revenue loss), asking for 10 minutes to photograph the panel feels natural.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl border-cyan-500/30">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                            <i class="fas fa-lightbulb text-cyan-400"></i>
+                            Why the Pain Audit Works
+                        </h3>
+                        <ul class="space-y-4 text-slate-300 text-sm">
+                            <li class="flex items-start gap-3">
+                                <div class="text-cyan-400 font-bold shrink-0">1.</div>
+                                <div>
+                                    <strong class="text-white block mb-1">Makes Them Do the Math</strong>
+                                    <span class="text-slate-400">When they write down "$50,000" next to "Revenue Hemorrhage," they're now emotionally invested in solving a $50K problem—not buying a $25K generator.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="text-cyan-400 font-bold shrink-0">2.</div>
+                                <div>
+                                    <strong class="text-white block mb-1">Pre-Qualifies the Tier</strong>
+                                    <span class="text-slate-400">Their answers tell you if they need Tier 1 (Backup Power), Tier 2 (Service Account), or Tier 3 (LED Retrofit). You aren't guessing anymore.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="text-cyan-400 font-bold shrink-0">3.</div>
+                                <div>
+                                    <strong class="text-white block mb-1">Justifies the Site Walk</strong>
+                                    <span class="text-slate-400">After they check 4-5 boxes, asking for "10 minutes to photograph the electrical room" feels like the obvious next step—not an intrusive request.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- When to Deploy -->
+                    <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                        <h4 class="text-white font-bold mb-3 text-sm uppercase tracking-wide flex items-center gap-2">
+                            <i class="fas fa-calendar-check text-cyan-400"></i>
+                            Read the Room: Which Path?
+                        </h4>
+                        <ul class="space-y-2 text-xs text-slate-400">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-0.5"></i>
+                                <span><strong class="text-white">Use Path A (Direct):</strong> Decision maker is engaged, facility clearly has downtime risk (restaurants, manufacturing, cold storage), they're nodding along to your opener.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-rose-400 mt-0.5"></i>
+                                <span><strong class="text-white">Use Path B (Audit First):</strong> They're hesitant, "we've never had issues," skeptical body language, or you're talking to a gatekeeper who needs ammunition for their boss.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-ban text-slate-500 mt-0.5"></i>
+                                <span><strong class="text-white">Don't do this at the front desk:</strong> Receptionists don't have authority or data. Get to the decision maker first.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: The Audit Flow -->
+                <div class="space-y-8">
+                    <div onclick="openModal('modal-pain-intro')" class="glass-card p-8 rounded-2xl relative overflow-hidden interactive-card group border-green-500/30 hover:border-green-400/60 shadow-[0_0_15px_rgba(74,222,128,0.05)]">
                         <div class="absolute top-0 right-0 w-16 h-16 bg-green-500/10 rounded-bl-full"></div>
                         <h4 class="text-green-400 font-bold mb-4 flex justify-between items-center">
-                            <span class="flex items-center"><i class="fas fa-shoe-prints mr-3"></i> The Walkthrough Ask</span>
+                            <span class="flex items-center"><i class="fas fa-comments mr-3"></i> The Introduction Script</span>
                             <i class="fas fa-expand-alt text-green-500 opacity-50 group-hover:opacity-100 text-sm interactive-icon"></i>
                         </h4>
                         <p class="text-slate-300 leading-relaxed italic mb-4">
-                            "Hey [Name], Raphael with Mainstream. We're doing some backup power upgrades nearby. Mind if I take 10 minutes to grab some photos of your main service panel and critical loads? My engineering team will map out exactly what it takes to keep you online."
+                            "Hey [Name], Raphael with Mainstream Electric. We're doing some backup power upgrades nearby. Mind if I take 10 minutes to grab some photos of your main service panel and critical loads? My engineering team will map out exactly what it takes to keep you online."
                         </p>
                         <div class="bg-slate-950 p-4 border border-slate-800 rounded-lg italic text-slate-300 text-sm">
                             <strong class="text-cyan-400 not-italic block mb-1">The Binary Choice Close:</strong>
                             "Should I start by taking photos of the main service panel, or is there a backup unit I should document first?"
                         </div>
                     </div>
+
+                    <div onclick="openModal('modal-pain-audit')" class="glass-card p-8 rounded-2xl relative overflow-hidden interactive-card group border-rose-500/30 hover:border-rose-400/60 shadow-[0_0_15px_rgba(244,63,94,0.1)] mt-8">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-rose-500/5 rounded-bl-full"></div>
+                        <h4 class="text-rose-400 font-bold mb-4 flex justify-between items-center">
+                            <span class="flex items-center"><i class="fas fa-heartbeat mr-3"></i> The Pain Audit (If They Hesitate)</span>
+                            <i class="fas fa-expand-alt text-rose-400 opacity-50 group-hover:opacity-100 text-sm interactive-icon"></i>
+                        </h4>
+                        <p class="text-slate-300 leading-relaxed mb-4">
+                            <strong class="text-white">If they're hesitant about the site walk,</strong> pivot to the Pain Audit to build urgency first.
+                        </p>
+                        <div class="bg-slate-950 p-4 rounded-lg border border-rose-500/20 text-slate-300 text-xs italic">
+                            "I get it—you're busy. Let me ask you 7 quick questions first so I'm not wasting your time with the wrong solution. Takes 2 minutes max, then we'll know if it even makes sense for me to look at your setup. Fair?"
+                        </div>
+                        <div class="mt-3 text-slate-500 text-xs">
+                            <p class="mb-2"><strong class="text-rose-400">Then pull out the printed audit</strong> and walk through each question, letting them check boxes and fill in the revenue loss estimate.</p>
+                            <p class="italic">Click to see the full 7-question breakdown &rarr;</p>
+                        </div>
+                    </div>
+
+                    <!-- Tier Mapping -->
+                    <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                        <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wide flex items-center gap-2">
+                            <i class="fas fa-filter text-cyan-400"></i>
+                            Audit Results → Tier Mapping
+                        </h4>
+                        <div class="space-y-3 text-xs">
+                            <div class="flex items-start gap-3 pb-3 border-b border-slate-800">
+                                <div class="bg-rose-500/20 text-rose-400 font-bold px-2 py-1 rounded text-[10px] shrink-0">Q1-Q4</div>
+                                <div>
+                                    <strong class="text-white block mb-1">Tier 1: Backup Power</strong>
+                                    <span class="text-slate-400">Revenue loss, wasted payroll, equipment damage, generator failure = They need BESS/ATS/Generator project ($100K+)</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 pb-3 border-b border-slate-800">
+                                <div class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-1 rounded text-[10px] shrink-0">Q4+Q7</div>
+                                <div>
+                                    <strong class="text-white block mb-1">Tier 2: Service Account</strong>
+                                    <span class="text-slate-400">Backup generator fails when needed = PM contract to test/maintain backup systems quarterly ($6K-20K/yr)</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-green-500/20 text-green-400 font-bold px-2 py-1 rounded text-[10px] shrink-0">ALL NO</div>
+                                <div>
+                                    <strong class="text-white block mb-1">Tier 3: LED Retrofit</strong>
+                                    <span class="text-slate-400">No major pain = Pivot to LED retrofit. "No downtime risk? Let's cut your overhead instead. SMUD rebates cover half."</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transition to Site Walk -->
+                    <div class="bg-cyan-600/10 border border-cyan-500/30 p-6 rounded-2xl">
+                        <h4 class="text-cyan-400 font-bold mb-3 flex items-center gap-2">
+                            <i class="fas fa-arrow-right"></i>
+                            The Transition to Site Walk
+                        </h4>
+                        <p class="text-slate-300 text-sm italic mb-3">
+                            "Based on what you just told me, this is a <strong class="text-cyan-400">real problem</strong> that's costing you serious money. Let me grab some quick photos of your electrical setup so my engineering team can build you an actual solution—not just a generic quote. Should take 10 minutes max."
+                        </p>
+                        <div class="text-[10px] text-cyan-400 font-bold uppercase tracking-wide flex items-center gap-2">
+                            <i class="fas fa-lightbulb"></i> This is the bridge from pain to action
+                        </div>
+                    </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- MODULE 3: THE SITE WALK -->
+        <section id="walkthrough" class="py-24 px-6 lg:px-12 bg-slate-900 border-t border-slate-800 max-w-6xl mx-auto w-full">
+            <div class="mb-16">
+                <span class="text-cyan-500 font-bold tracking-widest text-xs uppercase">Module 03</span>
+                <h2 class="text-4xl font-bold text-white mt-2">The Site Walk: Gathering Data</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                
                 <div id="photo-audit" class="space-y-8">
                     <h3 class="text-2xl font-bold">The 10-Minute Photo Audit</h3>
                     <p class="text-slate-400">Your objective is to collect data for your boss to do the technical sizing. You are the data gatherer, not the engineer.</p>
                     
-                    <ul class="grid grid-cols-1 gap-4 mt-4">
+                    <div onclick="openModal('modal-walkthrough')" class="glass-card p-6 rounded-2xl relative overflow-hidden interactive-card group border-green-500/30 hover:border-green-400/60 cursor-pointer">
+                        <h4 class="text-green-400 font-bold mb-3 flex justify-between items-center">
+                            <span class="flex items-center"><i class="fas fa-camera mr-3"></i> Photo Checklist</span>
+                            <i class="fas fa-expand-alt text-green-500 opacity-50 group-hover:opacity-100 text-sm interactive-icon"></i>
+                        </h4>
+                        <p class="text-slate-400 text-sm mb-4">Click to see the complete photo documentation protocol.</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="flex items-center gap-2 text-slate-300">
+                                <i class="fas fa-check text-cyan-400"></i> Panel Nameplates
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-300">
+                                <i class="fas fa-check text-cyan-400"></i> Circuit Schedules
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-300">
+                                <i class="fas fa-check text-cyan-400"></i> Equipment Layout
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-300">
+                                <i class="fas fa-check text-cyan-400"></i> NEC Violations
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <ul class="grid grid-cols-1 gap-4">
                         <li class="flex items-center gap-4 bg-slate-950 p-4 rounded-xl border border-slate-800 shadow-sm">
                             <div class="text-cyan-500"><i class="fas fa-camera"></i></div>
                             <span class="text-sm">Clear photos of all electrical panel labels & service size tags</span>
@@ -257,11 +445,193 @@
                     </ul>
                 </div>
 
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold">Field Execution Tips</h3>
+                    
+                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                        <h4 class="text-white font-bold mb-4 flex items-center gap-2">
+                            <i class="fas fa-mobile-alt text-cyan-400"></i>
+                            Photo Quality Standards
+                        </h4>
+                        <ul class="space-y-3 text-sm text-slate-400">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Text must be <strong class="text-white">completely legible</strong> — zoom in if needed</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Multiple angles for degraded/old equipment</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Include reference objects for scale (doors, people, tools)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-0.5 shrink-0"></i>
+                                <span>Wide shots + close-ups of every critical component</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-cyan-600/10 border border-cyan-500/30 p-6 rounded-2xl">
+                        <h4 class="text-cyan-400 font-bold mb-3 flex items-center gap-2">
+                            <i class="fas fa-clock"></i>
+                            Manage Your Time
+                        </h4>
+                        <p class="text-slate-300 text-sm mb-4">
+                            You promised 10 minutes. Stick to it. Set a timer if needed.
+                        </p>
+                        <div class="bg-slate-950 p-4 rounded border border-slate-800 text-xs space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Minutes 0-3:</span>
+                                <span class="text-white font-bold">Panel nameplates & service size</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Minutes 3-6:</span>
+                                <span class="text-white font-bold">Circuit schedules & critical loads</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Minutes 6-9:</span>
+                                <span class="text-white font-bold">Equipment layout & clearances</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Minute 9-10:</span>
+                                <span class="text-white font-bold">Quick scan for violations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-rose-500/10 border-l-4 border-rose-500 p-5 rounded-r-lg">
+                        <h4 class="text-rose-400 font-bold text-sm uppercase tracking-widest mb-2">The #1 Mistake:</h4>
+                        <p class="text-slate-300 text-sm">
+                            Trying to pitch during the site walk. <strong class="text-white">Don't do it.</strong> Your job is data collection. Let the photos and your boss's engineering proposal do the selling.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NEW MODULE: SERVICE ACCOUNT FALLBACK -->
+        <section id="service-account" class="py-24 px-6 lg:px-12 max-w-6xl mx-auto bg-slate-950 border-t border-slate-800">
+            <div class="mb-16">
+                <span class="text-amber-500 font-bold tracking-widest text-xs uppercase">Revenue Module</span>
+                <h2 class="text-4xl font-bold text-white mt-2">The Service Account Fallback</h2>
+                <p class="text-slate-400 mt-4 max-w-3xl">When they don't bite on the big project or already have an electrician, pivot to recurring revenue. Never leave empty-handed.</p>
+            </div>
+
+            <!-- Three Paths Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                
+                <!-- PATH A: Contracted Provider -->
+                <div onclick="openModal('modal-path-a')" class="glass-card p-8 rounded-2xl relative overflow-hidden interactive-card group border-amber-500/30 hover:border-amber-400/60">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-amber-500/5 rounded-bl-full"></div>
+                    <div class="text-amber-400 mb-4 text-3xl"><i class="fas fa-handshake"></i></div>
+                    <span class="text-[10px] font-bold text-amber-400 tracking-widest uppercase mb-2 block">Path A</span>
+                    <h3 class="text-xl font-bold text-white mb-3 flex justify-between items-center">
+                        Contracted Provider
+                        <i class="fas fa-expand-alt text-amber-400 opacity-50 group-hover:opacity-100 text-sm interactive-icon"></i>
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">They already have a primary electrician on contract.</p>
+                    <div class="bg-slate-950 p-4 rounded-lg border border-amber-500/20 text-slate-300 text-xs italic">
+                        "We work with a lot of facilities that have a primary electrician but bring us in as backup for overflow work..."
+                    </div>
+                    <div class="mt-4 text-xs text-amber-400 font-bold uppercase tracking-wide">→ Position as Secondary Backup</div>
+                </div>
+
+                <!-- PATH B: As-Needed -->
+                <div onclick="openModal('modal-path-b')" class="glass-card p-8 rounded-2xl relative overflow-hidden interactive-card group border-cyan-500/30 hover:border-cyan-400/60 shadow-[0_0_15px_rgba(34,211,238,0.05)]">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-cyan-500/5 rounded-bl-full"></div>
+                    <div class="text-cyan-400 mb-4 text-3xl"><i class="fas fa-phone-volume"></i></div>
+                    <span class="text-[10px] font-bold text-cyan-400 tracking-widest uppercase mb-2 block">Path B</span>
+                    <h3 class="text-xl font-bold text-white mb-3 flex justify-between items-center">
+                        As-Needed Calls
+                        <i class="fas fa-expand-alt text-cyan-400 opacity-50 group-hover:opacity-100 text-sm interactive-icon"></i>
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">They call electricians only when something breaks.</p>
+                    <div class="bg-slate-950 p-4 rounded-lg border border-cyan-500/20 text-slate-300 text-xs italic">
+                        "As-needed service calls bill at $150-$250/hour emergency rates. Most clients save 30-40% by switching to quarterly PM contracts..."
+                    </div>
+                    <div class="mt-4 text-xs text-cyan-400 font-bold uppercase tracking-wide">→ Educate on PM Savings</div>
+                </div>
+
+                <!-- PATH C: Hesitant -->
+                <div onclick="openModal('modal-path-c')" class="glass-card p-8 rounded-2xl relative overflow-hidden interactive-card group border-slate-700 hover:border-green-400/50">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-green-500/5 rounded-bl-full"></div>
+                    <div class="text-green-400 mb-4 text-3xl"><i class="fas fa-id-card"></i></div>
+                    <span class="text-[10px] font-bold text-green-400 tracking-widest uppercase mb-2 block">Path C</span>
+                    <h3 class="text-xl font-bold text-white mb-3 flex justify-between items-center">
+                        They're Hesitant
+                        <i class="fas fa-expand-alt text-green-400 opacity-50 group-hover:opacity-100 text-sm interactive-icon"></i>
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">Not ready to commit, but door isn't closed.</p>
+                    <div class="bg-slate-950 p-4 rounded-lg border border-green-500/20 text-slate-300 text-xs italic">
+                        "If your current electrician ever gets backed up or you need a second opinion on a quote, give me a call."
+                    </div>
+                    <div class="mt-4 text-xs text-green-400 font-bold uppercase tracking-wide">→ Leave Card as Backup Option</div>
+                </div>
+            </div>
+
+            <!-- Three Ways to Close -->
+            <div class="bg-slate-900 p-10 rounded-3xl border border-slate-800">
+                <div class="mb-8 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-2">Three Ways to Close the Service Account</h3>
+                    <p class="text-slate-500 text-sm">Pick the closing strategy that fits their risk tolerance and budget objections.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    
+                    <!-- Close 1: Trial Run -->
+                    <div onclick="openModal('modal-close-trial')" class="bg-slate-950 p-6 rounded-xl border border-slate-700 group interactive-card hover:border-amber-400/50">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center shrink-0 text-amber-400 font-bold border border-amber-500/30 group-hover:scale-110 transition">1</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm mb-1">The Trial Run</h4>
+                                <p class="text-slate-500 text-xs">Low commitment, prove value first</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm italic">"Let's start with a one-time PM visit. If you like the work, we can talk quarterly contract."</p>
+                        <div class="mt-4 text-xs text-amber-400 font-bold flex items-center gap-2">
+                            <i class="fas fa-bolt"></i> Best for: Risk-averse managers
+                        </div>
+                    </div>
+
+                    <!-- Close 2: Emergency Retainer -->
+                    <div onclick="openModal('modal-close-retainer')" class="bg-slate-950 p-6 rounded-xl border border-cyan-500/30 group interactive-card hover:border-cyan-400/50 shadow-[0_0_15px_rgba(34,211,238,0.05)]">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center shrink-0 text-cyan-400 font-bold border border-cyan-500/30 group-hover:scale-110 transition">2</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm mb-1">Emergency Retainer</h4>
+                                <p class="text-slate-500 text-xs">Fast response, no trip charges</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm italic">"$200/month gets you priority response, no trip charges, guaranteed 4-hour response for critical failures."</p>
+                        <div class="mt-4 text-xs text-cyan-400 font-bold flex items-center gap-2">
+                            <i class="fas fa-bolt"></i> Best for: 24/7 operations
+                        </div>
+                    </div>
+
+                    <!-- Close 3: Scope-Specific -->
+                    <div onclick="openModal('modal-close-scope')" class="bg-slate-950 p-6 rounded-xl border border-slate-700 group interactive-card hover:border-green-400/50">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center shrink-0 text-green-400 font-bold border border-green-500/30 group-hover:scale-110 transition">3</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm mb-1">Scope-Specific Contract</h4>
+                                <p class="text-slate-500 text-xs">Carve out specialized work</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm italic">"We handle just generator maintenance for $1,200/year. You keep your current electrician for everything else."</p>
+                        <div class="mt-4 text-xs text-green-400 font-bold flex items-center gap-2">
+                            <i class="fas fa-bolt"></i> Best for: Specialized equipment
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
         <!-- MODULE 3: ADVANCED MECHANICS -->
-        <section id="psychology" class="py-24 bg-slate-950 px-6 lg:px-12 border-t border-slate-800">
+        <section id="psychology" class="py-24 bg-slate-900 px-6 lg:px-12 border-t border-slate-800">
             <div class="max-w-6xl mx-auto">
                 <div class="mb-16 flex justify-between items-end">
                     <div>
@@ -346,7 +716,7 @@
                             <div class="text-xs font-bold text-white uppercase tracking-tighter">Equipment Layout</div>
                         </div>
                         <div onclick="openModal('modal-violations')" class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center group interactive-card relative overflow-hidden">
-                            <div class="absolute top-0 right-0 w-2 h-full bg-rose-500/50"></div> <!-- Red Danger Accent -->
+                            <div class="absolute top-0 right-0 w-2 h-full bg-rose-500/50"></div>
                             <i class="fas fa-exclamation-triangle text-2xl text-rose-500 mb-3 interactive-icon"></i>
                             <div class="text-xs font-bold text-white uppercase tracking-tighter">Existing Violations</div>
                         </div>
@@ -356,7 +726,7 @@
         </section>
 
         <!-- MODULE 4: THE THREE-TIER CLOSE -->
-        <section id="tiers" class="py-24 px-6 lg:px-12 max-w-6xl mx-auto bg-slate-900 border-t border-slate-800">
+        <section id="tiers" class="py-24 px-6 lg:px-12 max-w-6xl mx-auto bg-slate-950 border-t border-slate-800">
             <div class="text-center mb-12">
                 <span class="text-cyan-500 font-bold tracking-widest text-xs uppercase mb-2 block">Module 04</span>
                 <h2 class="text-4xl font-bold text-white mb-4">The Three-Tier Close</h2>
@@ -459,9 +829,7 @@
     <!-- Global Modal Overlay System -->
     <div id="modalOverlay" class="fixed inset-0 bg-slate-950/90 z-[100] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event)">
         
-        <!-- ============================================== -->
         <!-- RECEPTIONIST SCRIPT MODAL -->
-        <!-- ============================================== -->
         <div id="modal-receptionist" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-2xl w-full hidden shadow-2xl relative">
             <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
             <div class="text-green-400 mb-4 text-3xl neon-green-glow"><i class="fas fa-comments"></i></div>
@@ -507,9 +875,7 @@
             </ul>
         </div>
 
-        <!-- ============================================== -->
         <!-- THE DROP-OFF SCRIPT MODAL -->
-        <!-- ============================================== -->
         <div id="modal-dropoff" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-2xl w-full hidden shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
             <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
             <div class="text-cyan-500 mb-4 text-3xl"><i class="fas fa-folder-open"></i></div>
@@ -595,21 +961,19 @@
             </ul>
         </div>
 
-        <!-- ============================================== -->
-        <!-- THE WALKTHROUGH SCRIPT MODAL -->
-        <!-- ============================================== -->
-        <div id="modal-walkthrough" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-2xl w-full hidden shadow-2xl relative">
+        <!-- THE INTRODUCTION SCRIPT MODAL (Module 2) -->
+        <div id="modal-pain-intro" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-2xl w-full hidden shadow-2xl relative">
             <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
-            <div class="text-green-400 mb-4 text-3xl neon-green-glow"><i class="fas fa-shoe-prints"></i></div>
-            <h3 class="text-2xl font-bold text-white mb-2">The Walkthrough Ask</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Transitioning from the introduction to getting physical access to the electrical room.</p>
+            <div class="text-green-400 mb-4 text-3xl neon-green-glow"><i class="fas fa-comments"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">The Introduction Script</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Opening strong with the decision maker and transitioning directly to the site walk request.</p>
 
             <div class="bg-slate-950 p-6 rounded-xl border border-green-500/30 text-slate-200 font-medium italic mb-6 shadow-[0_0_15px_rgba(74,222,128,0.05)]">
-                "Hey [Name], Raphael with Mainstream. We're doing some backup power upgrades nearby. Mind if I take 10 minutes to grab some photos of your main service panel and critical loads? My engineering team will map out exactly what it takes to keep you online—if the numbers make sense, great. If not, at least you know your options."
+                "Hey [Name], Raphael with Mainstream Electric. We're doing some backup power upgrades nearby. Mind if I take 10 minutes to grab some photos of your main service panel and critical loads? My engineering team will map out exactly what it takes to keep you online—if the numbers make sense, great. If not, at least you know your options."
             </div>
 
             <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> The Psychology:</h4>
-            <ul class="space-y-4">
+            <ul class="space-y-4 mb-6">
                 <li class="flex items-start gap-3 text-sm text-slate-300">
                     <i class="fas fa-stopwatch mt-1 text-cyan-500"></i>
                     <div>
@@ -625,18 +989,498 @@
                     </div>
                 </li>
                 <li class="flex items-start gap-3 text-sm text-slate-300">
-                    <i class="fas fa-code-branch mt-1 text-green-400"></i>
+                    <i class="fas fa-handshake mt-1 text-green-400"></i>
                     <div>
-                        <strong class="text-green-400 block mb-1">The Binary Choice Close</strong>
-                        <span class="text-slate-400">Instead of asking "Can I take photos?" (Yes/No), ask "Should I start with the main panel or the backup unit?" This assumes the 'Yes' and gives them a choice of *where* to start, not *if* you can start.</span>
+                        <strong class="text-green-400 block mb-1">"If the numbers make sense, great. If not..."</strong>
+                        <span class="text-slate-400">Removes pressure. You're giving them an out, which paradoxically makes them more likely to say yes.</span>
                     </div>
                 </li>
             </ul>
+
+            <div class="bg-cyan-600/10 border-l-4 border-cyan-500 p-4 rounded-r-lg">
+                <h5 class="text-cyan-400 font-bold text-sm uppercase tracking-widest mb-2">The Binary Choice Close:</h5>
+                <p class="text-slate-300 text-sm italic mb-3">
+                    "Should I start by taking photos of the main service panel, or is there a backup unit I should document first?"
+                </p>
+                <p class="text-slate-400 text-xs">Instead of asking "Can I take photos?" (Yes/No), you assume the 'Yes' and give them a choice of WHERE to start, not IF you can start.</p>
+            </div>
         </div>
 
-        <!-- ============================================== -->
+        <!-- THE WALKTHROUGH MODAL (Module 3 - Photo Checklist) -->
+        <div id="modal-walkthrough" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-2xl w-full hidden shadow-2xl relative">
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
+            <div class="text-green-400 mb-4 text-3xl neon-green-glow"><i class="fas fa-camera"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">The Photo Audit Checklist</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">What to photograph during the 10-minute site walk. Your job is data collection, not sizing the project.</p>
+
+            <div class="space-y-4">
+                <div class="bg-slate-950 p-5 rounded-xl border border-cyan-500/30">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold text-sm shrink-0">1</div>
+                        <h4 class="text-white font-bold">Panel Nameplates</h4>
+                    </div>
+                    <p class="text-slate-400 text-sm">Capture manufacturer, voltage, phase, main breaker amperage. Text must be completely legible. Multiple angles if panel is old/degraded.</p>
+                </div>
+
+                <div class="bg-slate-950 p-5 rounded-xl border border-slate-800">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold text-sm shrink-0">2</div>
+                        <h4 class="text-white font-bold">Circuit Schedules</h4>
+                    </div>
+                    <p class="text-slate-400 text-sm">Photograph panel directory. Note which breakers tie to critical ops (servers, refrigeration, production lines).</p>
+                </div>
+
+                <div class="bg-slate-950 p-5 rounded-xl border border-slate-800">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold text-sm shrink-0">3</div>
+                        <h4 class="text-white font-bold">Equipment Layout</h4>
+                    </div>
+                    <p class="text-slate-400 text-sm">Wide shots of electrical room and exterior walls. Document clearance for ATS/BESS/generator. Note obstacles (piping, HVAC, tight spaces).</p>
+                </div>
+
+                <div class="bg-slate-950 p-5 rounded-xl border border-slate-800">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold text-sm shrink-0">4</div>
+                        <h4 class="text-white font-bold">Existing Generator Info</h4>
+                    </div>
+                    <p class="text-slate-400 text-sm">If present: make, model, year, fuel type, load capacity. Document condition and any obvious issues.</p>
+                </div>
+
+                <div class="bg-slate-950 p-5 rounded-xl border border-rose-500/30">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-full bg-rose-500/20 flex items-center justify-center text-rose-400 font-bold text-sm shrink-0">5</div>
+                        <h4 class="text-white font-bold">NEC Violations (Bonus)</h4>
+                    </div>
+                    <p class="text-slate-400 text-sm">Blocked panel clearances, double-tapped breakers, ungrounded systems. Documenting these = code-compliance upsell opportunities.</p>
+                </div>
+            </div>
+
+            <div class="bg-rose-500/10 border-l-4 border-rose-500 p-4 rounded-r-lg mt-6">
+                <h5 class="text-rose-500 font-bold text-xs uppercase tracking-widest mb-2">Critical Rule:</h5>
+                <p class="text-slate-300 text-sm">Do NOT pitch products during the site walk. Just gather data. Upload photos immediately to Boss/Engineering for remote assessment.</p>
+            </div>
+        </div>
+
+        <!-- THE 2-MINUTE PAIN AUDIT MODAL -->
+        <div id="modal-pain-audit" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-4xl w-full hidden shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
+            <div class="text-rose-500 mb-4 text-3xl drop-shadow-[0_0_8px_rgba(244,63,94,0.6)]"><i class="fas fa-heartbeat"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">The 2-Minute Pain Audit</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Seven questions that quantify their downtime cost and pre-qualify the tier. Hand them the printed flyer and walk through each question together.</p>
+
+            <!-- Opening Script -->
+            <div class="bg-slate-950 p-6 rounded-xl border border-rose-500/30 text-slate-200 font-medium mb-6">
+                <h4 class="text-rose-400 font-bold mb-3 text-sm uppercase tracking-wide">The Pain Audit Setup (When They Hesitate):</h4>
+                <p class="italic mb-4">
+                    "I get it—you're busy. Let me ask you 7 quick questions first so I'm not wasting your time with the wrong solution. Takes 2 minutes max, then we'll know if it even makes sense for me to look at your setup. Fair?"
+                </p>
+                <div class="border-t border-slate-800 pt-3 mt-3">
+                    <p class="text-cyan-400 font-bold text-sm mb-2">[Pull out the printed Pain Assessment flyer]</p>
+                    <p class="text-slate-400 text-xs">"Here, let's just check off what applies to you. These are the 7 ways PSPS events are bleeding money from facilities like yours."</p>
+                </div>
+            </div>
+
+            <!-- The 7 Questions -->
+            <div class="space-y-4 mb-6">
+                <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i class="fas fa-clipboard-check text-rose-400"></i>
+                    The 7 Questions (Walk Through Together)
+                </h4>
+
+                <!-- Q1 -->
+                <div class="bg-slate-950 p-5 rounded-lg border border-rose-500/20">
+                    <div class="flex items-start gap-3 mb-3">
+                        <div class="bg-rose-500/20 text-rose-400 font-bold px-2 py-1 rounded text-xs shrink-0">Q1</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Revenue Hemorrhage</h5>
+                            <p class="text-slate-400 text-xs mt-1">"Has a PSPS event cost your business significant lost revenue in a single year?"</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 p-3 rounded border border-slate-800">
+                        <p class="text-cyan-400 text-xs font-bold mb-2">CRITICAL: Make Them Write the Number</p>
+                        <p class="text-slate-300 text-xs italic">"What would you estimate the cost was from your last major outage? Just ballpark it for me."</p>
+                        <p class="text-slate-500 text-[10px] mt-2">When they write "$50,000" on the flyer, they're now solving a $50K problem—not buying a $25K generator.</p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-slate-950 p-5 rounded-lg border border-slate-800">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-rose-500/20 text-rose-400 font-bold px-2 py-1 rounded text-xs shrink-0">Q2</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Wasted Payroll</h5>
+                            <p class="text-slate-400 text-xs mt-1">"Are you forced to pay your workforce to sit idle in the dark while you wait for the utility company to restore the grid?"</p>
+                            <p class="text-slate-500 text-[10px] mt-2 italic">→ Uncovers hidden cost: full staffing cost during zero production.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-slate-950 p-5 rounded-lg border border-slate-800">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-rose-500/20 text-rose-400 font-bold px-2 py-1 rounded text-xs shrink-0">Q3</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Equipment Casualties</h5>
+                            <p class="text-slate-400 text-xs mt-1">"Have sudden power drops or harsh surges ever damaged your expensive servers, HVAC systems, or critical manufacturing machinery?"</p>
+                            <p class="text-slate-500 text-[10px] mt-2 italic">→ Identifies hard asset damage beyond revenue loss.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-slate-950 p-5 rounded-lg border border-cyan-500/30">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-1 rounded text-xs shrink-0">Q4</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">The "False Hope" Failure</h5>
+                            <p class="text-slate-400 text-xs mt-1">"Has your backup generator ever failed to start exactly when you needed it most, leaving you completely stranded?"</p>
+                            <p class="text-cyan-400 text-[10px] mt-2 font-bold italic">→ If YES: Instant Tier 2 (Service Account) qualification. They need quarterly PM contracts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-slate-950 p-5 rounded-lg border border-slate-800">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-rose-500/20 text-rose-400 font-bold px-2 py-1 rounded text-xs shrink-0">Q5</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Inventory & Data Spoilage</h5>
+                            <p class="text-slate-400 text-xs mt-1">"Are you at risk of losing perishable inventory, sensitive cloud data, or active production runs during an unannounced shutoff?"</p>
+                            <p class="text-slate-500 text-[10px] mt-2 italic">→ Restaurants, cold storage, data centers = high-value targets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-slate-950 p-5 rounded-lg border border-slate-800">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-rose-500/20 text-rose-400 font-bold px-2 py-1 rounded text-xs shrink-0">Q6</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Reputation Damage</h5>
+                            <p class="text-slate-400 text-xs mt-1">"Have clients, tenants, or partners lost trust in your facility's reliability because you couldn't deliver during an outage?"</p>
+                            <p class="text-slate-500 text-[10px] mt-2 italic">→ The emotional/relationship cost that's harder to quantify but deeply felt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-slate-950 p-5 rounded-lg border border-slate-800">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-rose-500/20 text-rose-400 font-bold px-2 py-1 rounded text-xs shrink-0">Q7</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Compliance & Safety Nightmares</h5>
+                            <p class="text-slate-400 text-xs mt-1">"Would an extended outage put you in violation of health codes, safety regulations, or expose you to severe compliance fines?"</p>
+                            <p class="text-slate-500 text-[10px] mt-2 italic">→ Medical facilities, food service, labs = regulatory risk layer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- After the Audit -->
+            <div class="bg-cyan-600/10 border-l-4 border-cyan-500 p-5 rounded-r-lg mb-6">
+                <h5 class="text-cyan-400 font-bold text-sm uppercase tracking-widest mb-2">After They Fill It Out:</h5>
+                <p class="text-slate-300 text-sm mb-3 italic">
+                    "Based on what you just told me, this is a <strong class="text-white">real problem</strong> that's costing you serious money. Let me grab some quick photos of your electrical setup so my engineering team can build you an actual solution—not just a generic quote."
+                </p>
+                <div class="bg-slate-950 p-3 rounded border border-cyan-500/20 text-xs text-slate-400">
+                    <strong class="text-cyan-400 block mb-1">The Natural Transition:</strong>
+                    The audit creates emotional momentum. Asking for 10 minutes to photograph the panel now feels like the obvious next step—not an intrusive request.
+                </div>
+            </div>
+
+            <!-- Tier Qualification Guide -->
+            <div class="bg-slate-950 p-6 rounded-xl border border-slate-800">
+                <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wide flex items-center gap-2">
+                    <i class="fas fa-filter text-rose-400"></i>
+                    How to Read Their Answers → Tier Routing
+                </h4>
+                <div class="space-y-3 text-xs">
+                    <div class="flex items-start gap-3 pb-3 border-b border-slate-800">
+                        <div class="bg-rose-500/20 text-rose-400 font-bold px-2 py-1 rounded text-[10px] shrink-0 h-fit">TIER 1</div>
+                        <div>
+                            <strong class="text-white block mb-1">Backup Power Project ($100K+)</strong>
+                            <span class="text-slate-400">If they check Q1 (Revenue loss), Q2 (Wasted payroll), Q3 (Equipment damage), Q5 (Inventory spoilage) → They need a BESS/Generator/ATS system.</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 pb-3 border-b border-slate-800">
+                        <div class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-1 rounded text-[10px] shrink-0 h-fit">TIER 2</div>
+                        <div>
+                            <strong class="text-white block mb-1">Service Account ($6K-20K/yr)</strong>
+                            <span class="text-slate-400">If they check Q4 (Generator failed when needed) → They need quarterly PM contracts to test/maintain backup systems.</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="bg-green-500/20 text-green-400 font-bold px-2 py-1 rounded text-[10px] shrink-0 h-fit">TIER 3</div>
+                        <div>
+                            <strong class="text-white block mb-1">LED Retrofit (Fast Payback)</strong>
+                            <span class="text-slate-400">If they check NONE or only Q6/Q7 (soft costs) → Pivot to LED retrofit: "No major downtime risk? Let's cut your overhead instead. SMUD rebates cover half."</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICE ACCOUNT PATH A MODAL -->
+        <div id="modal-path-a" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-3xl w-full hidden shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
+            <div class="text-amber-400 mb-4 text-3xl"><i class="fas fa-handshake"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">Path A: They Have a Contracted Service Provider</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Position yourself as the secondary backup or overflow vendor. You're not threatening their current relationship—you're solving for capacity and emergency coverage.</p>
+
+            <div class="bg-slate-950 p-6 rounded-xl border border-amber-500/30 text-slate-200 font-medium mb-6">
+                <h4 class="text-amber-400 font-bold mb-3 text-sm uppercase tracking-wide">The Opening Script:</h4>
+                <p class="italic mb-4">
+                    "We work with a lot of facilities that have a primary electrician but bring us in as backup for overflow work, emergency calls, or specialized stuff like backup power or LED retrofits. Would it make sense to have us on file as a secondary vendor?"
+                </p>
+            </div>
+
+            <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2"><i class="fas fa-lightbulb text-amber-400"></i> Strategy Breakdown:</h4>
+            <ul class="space-y-4 mb-6">
+                <li class="flex items-start gap-3 text-sm text-slate-300">
+                    <div class="text-amber-400 font-bold shrink-0">1.</div>
+                    <div>
+                        <strong class="text-white block mb-1">No Threat Positioning</strong>
+                        <span class="text-slate-400">You aren't asking them to fire their current electrician. You're acknowledging that relationship while positioning yourself as the safety net.</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-slate-300">
+                    <div class="text-amber-400 font-bold shrink-0">2.</div>
+                    <div>
+                        <strong class="text-white block mb-1">Plant the Overflow Seed</strong>
+                        <span class="text-slate-400">Most contracted electricians get backed up. When that happens, facilities need a trusted backup. You're that backup.</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-slate-300">
+                    <div class="text-amber-400 font-bold shrink-0">3.</div>
+                    <div>
+                        <strong class="text-white block mb-1">Specialize Where They Don't</strong>
+                        <span class="text-slate-400">Most general electricians avoid backup power projects (too complex) or LED retrofits (too time-consuming). This is your opening to carve out specialized work.</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="bg-amber-500/10 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                <h5 class="text-amber-400 font-bold text-xs uppercase tracking-widest mb-2">Follow-Up Question to Secure the Backup Role:</h5>
+                <p class="text-slate-300 text-sm italic">"If your current electrician ever gets backed up during a busy week or you need a second opinion on a quote, can I leave my card so you have it on file?"</p>
+            </div>
+        </div>
+
+        <!-- SERVICE ACCOUNT PATH B MODAL -->
+        <div id="modal-path-b" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-3xl w-full hidden shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
+            <div class="text-cyan-400 mb-4 text-3xl"><i class="fas fa-phone-volume"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">Path B: They Call Electricians As-Needed</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Educate them on the hidden cost of reactive maintenance. Show how PM contracts save 30-40% vs. emergency rates while preventing catastrophic failures.</p>
+
+            <div class="bg-slate-950 p-6 rounded-xl border border-cyan-500/30 text-slate-200 font-medium mb-6 shadow-[0_0_15px_rgba(34,211,238,0.05)]">
+                <h4 class="text-cyan-400 font-bold mb-3 text-sm uppercase tracking-wide">The Opening Script:</h4>
+                <p class="italic mb-4">
+                    "Got it—so you're calling electricians as issues come up. Out of curiosity, are you getting hit with $150-$250/hour emergency rates when something breaks after hours?"
+                </p>
+                <p class="text-cyan-400 not-italic font-medium border-l-4 border-cyan-400 pl-4 my-4">
+                    [Wait for confirmation]
+                </p>
+                <p class="italic">
+                    "Most of our clients were doing the same thing until they realized they could save 30-40% by switching to quarterly PM contracts. Instead of paying $250/hour for emergency calls, you're paying $500-$1,500/quarter for scheduled maintenance that catches issues before they become emergencies. Would it make sense to at least see what a preventive contract would look like for a facility this size?"
+                </p>
+            </div>
+
+            <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2"><i class="fas fa-chart-line text-cyan-400"></i> The Cost Comparison Close:</h4>
+            <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 mb-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-rose-500 pl-4">
+                        <h5 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2">Reactive Maintenance (Current)</h5>
+                        <ul class="text-sm text-slate-400 space-y-2">
+                            <li>• $150-$250/hour emergency rates</li>
+                            <li>• 3-4 emergency calls/year = $2,000-$4,000</li>
+                            <li>• Downtime during failures = Lost revenue</li>
+                            <li>• No predictability or budget control</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-cyan-400 pl-4">
+                        <h5 class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-2">Preventive Contract (Proposed)</h5>
+                        <ul class="text-sm text-slate-300 space-y-2">
+                            <li>• $500-$1,500/quarter = $2,000-$6,000/year</li>
+                            <li>• Quarterly inspections catch issues early</li>
+                            <li>• Priority response (no emergency surcharges)</li>
+                            <li>• Predictable budgeting, zero downtime</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-cyan-500/10 border-l-4 border-cyan-500 p-4 rounded-r-lg">
+                <h5 class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-2">The Risk Mitigation Angle:</h5>
+                <p class="text-slate-300 text-sm italic">"The real value isn't just saving on labor costs—it's preventing the $50K downtime event because a breaker failed during your busiest week. PM contracts are insurance against catastrophic failure."</p>
+            </div>
+        </div>
+
+        <!-- SERVICE ACCOUNT PATH C MODAL -->
+        <div id="modal-path-c" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-3xl w-full hidden shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
+            <div class="text-green-400 mb-4 text-3xl"><i class="fas fa-id-card"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">Path C: They're Hesitant</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Not ready to commit today, but the door isn't closed. Leave your card and position yourself as the backup option when their current solution fails.</p>
+
+            <div class="bg-slate-950 p-6 rounded-xl border border-green-500/30 text-slate-200 font-medium mb-6">
+                <h4 class="text-green-400 font-bold mb-3 text-sm uppercase tracking-wide">The Graceful Exit Script:</h4>
+                <p class="italic mb-4">
+                    "No worries at all—sounds like you've got a system that's working for you right now. If your current electrician ever gets backed up or you need a second opinion on a quote, give me a call. 
+                    <span class="text-cyan-400 not-italic font-bold block my-3 border-l-2 border-cyan-400 pl-3">&rarr; [Hand them your card] "Here's my card—just keep it on file for backup."</span>
+                </p>
+            </div>
+
+            <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2"><i class="fas fa-seedling text-green-400"></i> Why This Works:</h4>
+            <ul class="space-y-4 mb-6">
+                <li class="flex items-start gap-3 text-sm text-slate-300">
+                    <div class="text-green-400 font-bold shrink-0">1.</div>
+                    <div>
+                        <strong class="text-white block mb-1">Zero Pressure Exit</strong>
+                        <span class="text-slate-400">You're acknowledging their current setup without any pushback. This removes all defensiveness and keeps the door open.</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-slate-300">
+                    <div class="text-green-400 font-bold shrink-0">2.</div>
+                    <div>
+                        <strong class="text-white block mb-1">Plant the Backup Seed</strong>
+                        <span class="text-slate-400">Everyone's "current electrician" eventually gets backed up, retires, or disappoints. Your card will be sitting right there when that happens.</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-slate-300">
+                    <div class="text-green-400 font-bold shrink-0">3.</div>
+                    <div>
+                        <strong class="text-white block mb-1">The "Second Opinion" Hook</strong>
+                        <span class="text-slate-400">This is a low-friction way back in. If they ever get a quote that feels high, you become the instant comparison bid—and you already have your foot in the door.</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="bg-green-500/10 border-l-4 border-green-500 p-4 rounded-r-lg mb-6">
+                <h5 class="text-green-400 font-bold text-xs uppercase tracking-widest mb-2">Advanced Move: The Follow-Up Timeline</h5>
+                <p class="text-slate-300 text-sm mb-3">Don't let the card gather dust. Build a follow-up cadence:</p>
+                <ul class="text-slate-400 text-xs space-y-2">
+                    <li><strong class="text-white">Week 2:</strong> Email with LED rebate info (low-pressure value add)</li>
+                    <li><strong class="text-white">Month 3:</strong> Check-in on PSPS preparedness (seasonal relevance)</li>
+                    <li><strong class="text-white">Month 6:</strong> "Still got your backup electrician on file?" touch-base</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <h5 class="text-white font-bold text-sm mb-2">Pro Tip: Add Them to Your CRM</h5>
+                <p class="text-slate-400 text-xs">Even if they don't bite today, they're now a "Warm Lead - Long Nurture" in ClickUp. Tag them with their current electrician status and set a 90-day follow-up reminder. These turn into contracts 6-12 months out when their current provider fails or gets too busy.</p>
+            </div>
+        </div>
+
+        <!-- CLOSING STRATEGY 1: TRIAL RUN MODAL -->
+        <div id="modal-close-trial" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-2xl w-full hidden shadow-2xl relative">
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
+            <div class="text-amber-400 mb-4 text-3xl"><i class="fas fa-vial"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">Closing Strategy 1: The Trial Run</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Low commitment, prove value first. Perfect for risk-averse managers who need to see results before signing a contract.</p>
+
+            <div class="bg-slate-950 p-6 rounded-xl border border-amber-500/30 text-slate-200 font-medium italic mb-6">
+                "I totally understand you want to see how we work before committing to a full contract. Let's start with a one-time PM visit—we'll do a full electrical inspection, test all your critical systems, and give you a detailed report on anything that needs attention. If you like the work and the level of detail we provide, we can talk about setting up a quarterly contract. Fair?"
+            </div>
+
+            <h4 class="text-lg font-bold text-white mb-4">Why This Works:</h4>
+            <ul class="space-y-3 text-sm text-slate-300">
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-amber-400 mt-1"></i>
+                    <div><strong class="text-white">Removes Risk:</strong> They're only committing to one visit, not a multi-year contract.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-amber-400 mt-1"></i>
+                    <div><strong class="text-white">Demonstrates Value:</strong> Your detailed inspection report proves you're more thorough than their current "as-needed" electrician.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-amber-400 mt-1"></i>
+                    <div><strong class="text-white">Uncovers Issues:</strong> The inspection almost always finds 2-3 issues they didn't know existed, creating immediate upsell opportunities.</div>
+                </li>
+            </ul>
+
+            <div class="bg-amber-500/10 border-l-4 border-amber-500 p-4 rounded-r-lg mt-6">
+                <h5 class="text-amber-400 font-bold text-xs uppercase tracking-widest mb-2">Best For:</h5>
+                <p class="text-slate-300 text-sm">Facilities that have never had a contracted electrician, skeptical operations managers, or companies burned by previous contractors.</p>
+            </div>
+        </div>
+
+        <!-- CLOSING STRATEGY 2: EMERGENCY RETAINER MODAL -->
+        <div id="modal-close-retainer" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-2xl w-full hidden shadow-2xl relative">
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
+            <div class="text-cyan-400 mb-4 text-3xl"><i class="fas fa-bolt"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">Closing Strategy 2: Emergency-Only Retainer</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Fast response, no trip charges. Perfect for 24/7 operations that can't afford downtime but aren't ready for full PM contracts.</p>
+
+            <div class="bg-slate-950 p-6 rounded-xl border border-cyan-500/30 text-slate-200 font-medium italic mb-6 shadow-[0_0_15px_rgba(34,211,238,0.05)]">
+                "I completely understand you're not ready for quarterly PM visits. How about this: for $200/month, you get priority emergency response—guaranteed 4-hour callout for critical failures, no trip charges, and you skip the line when we're slammed. You only pay the retainer; we bill labor and materials at our contract rate ($125/hr instead of $250/hr emergency). Does that sound like a better fit?"
+            </div>
+
+            <h4 class="text-lg font-bold text-white mb-4">Why This Works:</h4>
+            <ul class="space-y-3 text-sm text-slate-300">
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-cyan-400 mt-1"></i>
+                    <div><strong class="text-white">Low Monthly Commitment:</strong> $200/month feels manageable compared to a $1,500/quarter PM contract.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-cyan-400 mt-1"></i>
+                    <div><strong class="text-white">Instant ROI on First Call:</strong> First emergency call saves them $500+ in trip charges and emergency rate difference.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-cyan-400 mt-1"></i>
+                    <div><strong class="text-white">Priority Positioning:</strong> They're now "your client" when an emergency hits, not a one-off service call.</div>
+                </li>
+            </ul>
+
+            <div class="bg-cyan-500/10 border-l-4 border-cyan-500 p-4 rounded-r-lg mt-6">
+                <h5 class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-2">Best For:</h5>
+                <p class="text-slate-300 text-sm">24/7 operations (restaurants, gas stations, medical facilities), facilities with older equipment prone to failure, companies with high downtime costs.</p>
+            </div>
+        </div>
+
+        <!-- CLOSING STRATEGY 3: SCOPE-SPECIFIC MODAL -->
+        <div id="modal-close-scope" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-2xl w-full hidden shadow-2xl relative">
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-xl"></i></button>
+            <div class="text-green-400 mb-4 text-3xl"><i class="fas fa-crosshairs"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-2">Closing Strategy 3: Scope-Specific Contract</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-slate-800 pb-4">Carve out specialized work they don't trust their general electrician to handle. You keep your current electrician for everything else.</p>
+
+            <div class="bg-slate-950 p-6 rounded-xl border border-green-500/30 text-slate-200 font-medium italic mb-6">
+                "I get that you already have an electrician you trust for general work. What if we just handle your generator maintenance and testing? Most general electricians avoid backup power systems because the liability is high and the training is specialized. We'll do quarterly generator testing, transfer switch inspections, and load bank tests for $1,200/year. You keep your current guy for everything else. Does that make sense?"
+            </div>
+
+            <h4 class="text-lg font-bold text-white mb-4">Why This Works:</h4>
+            <ul class="space-y-3 text-sm text-slate-300">
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-green-400 mt-1"></i>
+                    <div><strong class="text-white">No Threat to Existing Relationship:</strong> You're not trying to replace their electrician—you're filling a gap.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-green-400 mt-1"></i>
+                    <div><strong class="text-white">Specialized Expertise:</strong> Generator maintenance is complex and most electricians avoid it. You're the expert.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-check text-green-400 mt-1"></i>
+                    <div><strong class="text-white">Foot in the Door:</strong> Once you're doing their generator work, you naturally discover other issues and expand the scope over time.</div>
+                </li>
+            </ul>
+
+            <div class="bg-green-500/10 border-l-4 border-green-500 p-4 rounded-r-lg mt-6 mb-6">
+                <h5 class="text-green-400 font-bold text-xs uppercase tracking-widest mb-2">Best For:</h5>
+                <p class="text-slate-300 text-sm">Facilities with backup generators, companies with specialized equipment (UPS systems, EV chargers), or sites that need NEC-compliant testing/documentation.</p>
+            </div>
+
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <h5 class="text-white font-bold text-sm mb-2">Common Scope-Specific Contracts:</h5>
+                <ul class="text-slate-400 text-xs space-y-2">
+                    <li>• <strong class="text-white">Generator Maintenance:</strong> $1,200-$2,400/year</li>
+                    <li>• <strong class="text-white">UPS/Battery Backup Testing:</strong> $800-$1,500/year</li>
+                    <li>• <strong class="text-white">EV Charger Maintenance:</strong> $600-$1,200/year</li>
+                    <li>• <strong class="text-white">Fire Alarm/Life Safety Testing:</strong> $1,500-$3,000/year</li>
+                </ul>
+            </div>
+        </div>
+
         <!-- THE VAULT MODAL (Workarounds, Objections, Pivots) -->
-        <!-- ============================================== -->
         <div id="modal-vault" class="modal-content bg-slate-900 border border-slate-700 rounded-2xl p-6 md:p-10 max-w-5xl w-full hidden shadow-2xl relative max-h-[90vh] flex flex-col">
             <button class="absolute top-4 right-4 text-slate-500 hover:text-white z-10" onclick="closeModal(event, true)"><i class="fas fa-times text-2xl"></i></button>
             
@@ -738,7 +1582,7 @@
                 Instead of asking "What's broken?", ask: <br><strong class="text-rose-400 neon-red-glow">"What happens to your revenue if this system fails during your busiest week 6 months from now?"</strong>
             </p>
             <p class="text-slate-400 text-sm leading-relaxed">
-                This question isn't just a filter; it’s a time-travel tool. It shifts the conversation from a $500 repair today to a $50,000 risk mitigation project. Always hunt for the root cause—if a breaker trips, is it the breaker, or did they add new machinery? Fixing the root cause leads to a system upgrade proposal.
+                This question isn't just a filter; it's a time-travel tool. It shifts the conversation from a $500 repair today to a $50,000 risk mitigation project. Always hunt for the root cause—if a breaker trips, is it the breaker, or did they add new machinery? Fixing the root cause leads to a system upgrade proposal.
             </p>
         </div>
 
@@ -785,7 +1629,7 @@
             <div class="text-cyan-500 mb-4 text-3xl"><i class="fas fa-list-ol"></i></div>
             <h3 class="text-2xl font-bold text-white mb-2">Circuit Schedules</h3>
             <p class="text-slate-400 text-sm leading-relaxed">
-                Photograph the panel directory. Note which specific breakers are currently tied to critical operations (servers, refrigeration, assembly lines). If the schedule is illegible or missing, note that—it’s an easy add-on service to trace and relabel the panel.
+                Photograph the panel directory. Note which specific breakers are currently tied to critical operations (servers, refrigeration, assembly lines). If the schedule is illegible or missing, note that—it's an easy add-on service to trace and relabel the panel.
             </p>
         </div>
 
